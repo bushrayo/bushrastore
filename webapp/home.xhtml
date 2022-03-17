@@ -1,0 +1,80 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+
+	<style>
+.bground2 {
+	width: 95%;
+	margin: auto;
+	border: 3px;
+}
+
+.img {
+	border-radius: 50%;
+}
+</style>
+
+</h:head>
+<h:body>
+	<ui:composition template="/templates/common.xhtml">
+
+
+
+		<ui:define name="content">
+			<center>
+				<h:form>
+					<h:panelGrid styleClass="bground2" id="panel" columns="10"
+						border="0" ellpadding="30" cellspacing="30">
+						<f:facet name="header">
+							
+		      	<h2>	 list of dress </h2>
+		     		  <hr />
+							<h:graphicImage height="200px" width="200px"
+								value="/resources/image/dress1.jpg" />
+							<h:graphicImage height="200px" width="200px"
+								value="/resources/image/dress4.jpg" />
+							<h:graphicImage height="200px" width="200px"
+								value="/resources/image/dress5.jpg" />
+							<br />
+							<br />
+						<h3>	<h:link value="see more dresses" outcome="shopping" /> </h3>&nbsp;
+		  			 </f:facet>
+						<hr />
+
+						<f:facet name="header">
+							<hr />
+							<br />
+							<br />
+		      			<h2>list of jackets</h2>
+		       			<hr />
+							<h:graphicImage height="200px" width="200px"
+								value="/resources/image/jacket1.jpg" />
+							<h:graphicImage height="200px" width="200px"
+								value="/resources/image/jacket2.jpg" />
+							<h:graphicImage height="200px" width="200px"
+								value="/resources/image/jacket3.jpg" />
+							<br /> <br />
+							<h:link value="see more jackets" outcome="shopping" />
+							<br />	<br />
+						</f:facet>
+					</h:panelGrid>
+
+				</h:form>
+			</center>
+
+		</ui:define>
+		<ui:define name="footer">
+			<h2></h2>
+
+		</ui:define>
+	</ui:composition>
+
+</h:body>
+</html>

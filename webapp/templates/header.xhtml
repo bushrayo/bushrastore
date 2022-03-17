@@ -1,0 +1,53 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+
+<style>
+		body {color: white;}
+
+</style>
+
+</head>
+
+<body>
+	<ui:composition>
+
+		<br /><br /><br />	<br />	<br />	<br /> <br />
+		<center>
+		
+		<h3>	<a href="./home.xhtml">	Home </a> &nbsp; 
+			<a href="./shopping.xhtml"> shopping</a>&nbsp;
+			<a href="./aboutUs.xhtml"> about</a>&nbsp;
+			<a href="./contact.xhtml"> contact</a>&nbsp; &nbsp;
+			<a href="./mySal.xhtml">
+				 <img src="../resources/image/salImage2.png" style="width: 30px; height: 30px"></img>
+			</a>&nbsp;
+			
+			<a href="./login.xhtml">
+				 <img src="../resources/image/loginImage.jpg" style="width: 30px; height: 30px"></img>
+			</a>&nbsp;
+
+			<h:form id="signOut">
+				<h:commandButton value="log out" rendered="#{userRegisteration.getLoginOk()}" action="#{userRegisteration.gologOut()}" />
+			</h:form>
+			<h:form id="admin">
+				<h:commandButton value="go to admin page." rendered="#{userRegisteration.getAdminUser()}" action="adminPage.xhtml" />
+			</h:form>
+</h3>
+
+
+		</center>
+
+		
+
+	</ui:composition>
+</body>
+</html>
+

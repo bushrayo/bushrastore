@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+<h:body>
+	<ui:composition template="/templates/common.xhtml">
+
+
+		<ui:define name="content">
+			<h2>contact page</h2>
+
+
+			<h:form>
+				<table>
+					<tr>
+						<td align="right">From:</td>
+						<td><h:inputText value="#{sendMail.fromMail}" /></td>
+					</tr>
+
+					<tr>
+						<td align="right">Password:</td>
+						<td><h:inputSecret value="#{sendMail.password}" /></td>
+					</tr>
+
+
+					<tr>
+						<td align="right">Subject:</td>
+						<td><h:inputText value="#{sendMail.subject}" /></td>
+					</tr>
+					<tr>
+						<td align="right">Message:</td>
+						<td><h:inputTextarea value="#{sendMail.message}" /></td>
+					</tr>
+				</table>
+				<h:commandButton value="Send" action="#{sendMail.send()}" />
+				<br />
+				
+			</h:form>
+
+
+
+
+		</ui:define>
+
+		<ui:define name="footer">
+			<h2></h2>
+
+		</ui:define>
+	</ui:composition>
+
+</h:body>
+</html>
+
+
+
+

@@ -1,0 +1,48 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+<head>
+<style>
+body {
+	background-image: url("../resources/image/background14.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: white;
+}
+</style>
+</head>
+
+<h:body>
+	<center>
+		<div
+			style="border-width: 1px; color: white; border-color: black; border-style: solid;">
+			<ui:insert name="header">
+				<ui:include src="/templates/header.xhtml" />
+			</ui:insert>
+		</div>
+		<br />
+
+		<div
+			style="border-width: 0px; border-color: black; border-style: solid;">
+			<ui:insert name="content">
+				<ui:include src="/templates/contents.xhtml" />
+			</ui:insert>
+		</div>
+		<br />
+
+		<div
+			style="border-width: 1px; border-color: black; border-style: solid;">
+			<ui:insert name="footer">
+				<ui:include src="/templates/footer.xhtml" />
+			</ui:insert>
+		</div>
+	</center>
+</h:body>
+</html>

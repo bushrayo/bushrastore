@@ -1,0 +1,36 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>
+	<ui:composition template="/templates/common.xhtml">
+
+
+		<ui:define name="content">
+			<h2>Items in basket </h2>
+			The names of items in your basket: <h:outputText value = "#{itemController.getItemsNamesInSal()}" />
+			<br/>
+			Purchase amount: <h:outputText value = "#{itemController.getPurchase()}" />
+			<br/>
+			<h:form>
+			<h:commandLink value="pay"
+						rendered="#{userRegisteration.getLoginOk()}"
+						onclick="if (!confirm('Are you sure you want to buy these items?')) return false"
+						action="#{itemController.reduceAmounts()}"/>
+			</h:form>
+			
+			<br/>
+			<h:link value="Back To Home" outcome="home" />
+
+		</ui:define>
+
+		<ui:define name="footer">
+		</ui:define>
+	</ui:composition>
+
+</h:body>
+</html>
